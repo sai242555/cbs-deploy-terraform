@@ -47,6 +47,8 @@ module "CBS_vNET" {
   source                  = "../Modules/CBS-VNet"
   resource_group_name     = azurerm_resource_group.azure_rg.name
   resource_group_location = var.resource_group_location
+  vnet_address_space      = var.vnet_address_space
+  subnets                 = var.subnets
   tags                    = var.tags
 }
 
