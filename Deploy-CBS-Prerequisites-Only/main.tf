@@ -12,7 +12,7 @@ terraform {
   required_version = ">= 0.13"
 }
 
- /*    If Authintication via Service Principles would be used: 
+/*    If Authintication via Service Principles would be used: 
     1. Uncomment the required params from main.tf and variables.tf 
     2. Add your service principle in terraform.tfvars              */
 
@@ -30,10 +30,13 @@ resource "azurerm_resource_group" "azure_rg" {
   tags     = var.tags
 }
 
+
 module "CBS_vNET" {
   source                  = "../Modules/CBS-VNet"
   resource_group_name     = azurerm_resource_group.azure_rg.name
   resource_group_location = var.resource_group_location
+  vnet_address_space      = var.vnet_address_space
+  subnets                 = var.subnets
   tags                    = var.tags
 }
 

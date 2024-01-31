@@ -15,7 +15,7 @@ terraform {
   required_version = ">= 0.13"
 }
 
- /*    If Authintication via Service Principles would be used: 
+/*    If Authintication via Service Principles would be used: 
     1. Uncomment the required params from main.tf and variables.tf 
     2. Add your service principle in terraform.tfvars              */
 
@@ -81,7 +81,7 @@ module "CBS-Identity" {
   resource_group_name     = azurerm_resource_group.azure_rg.name
   resource_group_location = var.resource_group_location
   cbs_vnet_id             = module.CBS_vNET.cbs_vnet_id
-  depends_on = [ azurerm_resource_group.azure_rg ]
+  depends_on              = [azurerm_resource_group.azure_rg]
 }
 
 module "CBS-VNET-Peering" {
@@ -113,7 +113,7 @@ module "CBS-Array" {
   jit_group_ids           = var.jit_group_ids
   tags                    = var.tags
   user_assigned_identity  = module.CBS-Identity.user_assigned_identity_id
-  depends_on = [ module.CBS-Identity ]
+  depends_on              = [module.CBS-Identity]
 
 }
 
