@@ -5,6 +5,9 @@ Terraform examples for deploying Pure Cloud Block Store (CBS) with all the assoc
 
 _Note: This repo only supports deploying Cloud Block Store in Azure_
 
+You can learn more information about Pure Cloud Block Store Terraform deployment from this KB: 
+https://support.purestorage.com/Pure_Cloud_Block_Store/Pure_Cloud_Block_Store_on_Azure_Implementation_Guide/Deploy_CBS_using_Terraform
+
 # How to Use
 
 1. Deploy an Azure VM in the same subscription where you are planning to deploy CBS.
