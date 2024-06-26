@@ -1,3 +1,4 @@
+/*
 variable "resource_group_name" {
     type        = string
     description = "RG name in Azure"
@@ -21,3 +22,4 @@ variable "cbs_system_subnet_id" {
     type        = string
   
 }
+*/
